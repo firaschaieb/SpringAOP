@@ -52,7 +52,7 @@ pipeline {
        
     /*  stage("Building Docker Image") {
                 steps{
-                    sh 'docker build -t gaston2100/achat .'
+                    sh 'docker build -t firas1925/achat .'
                 }
         }
         
@@ -60,12 +60,12 @@ pipeline {
            stage("Login to DockerHub") {
                 steps{
                    // sh 'sudo chmod 666 /var/run/docker.sock'
-                    sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u gaston2100 -p hinda2100@@'
+                    sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u firas1925 -p fir@s99'
                 }
         }
         stage("Push to DockerHub") {
                 steps{
-                    sh 'docker push gaston2100/achat'
+                    sh 'docker push firas1925/achat'
                 }
         }
     
