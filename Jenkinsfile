@@ -50,7 +50,7 @@ pipeline {
       }
     }
        
-    /*  stage("Building Docker Image") {
+      stage("Building Docker Image") {
                 steps{
                     sh 'docker build -t firas1925/achat .'
                 }
@@ -59,8 +59,8 @@ pipeline {
         
            stage("Login to DockerHub") {
                 steps{
-                   // sh 'sudo chmod 666 /var/run/docker.sock'
-                    sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u firas1925 -p fir@s99'
+                    sh 'sudo chmod 666 /var/run/docker.sock'
+                   // sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u firas1925 -p fir@s99'
                 }
         }
         stage("Push to DockerHub") {
@@ -73,7 +73,7 @@ pipeline {
                 steps{
                     sh 'docker-compose up -d'
                 }
-        } */
+        } 
     }
     
     post {
