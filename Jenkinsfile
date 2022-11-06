@@ -40,7 +40,7 @@ pipeline {
     sh "mvn sonar:sonar \
   -Dsonar.projectKey=sonar1 \
   -Dsonar.host.url=http://192.168.1.23:9000 \
-  -Dsonar.login=4b27556953542f6aba8d10f1380d590baae3ee59"
+  -Dsonar.login=4f3d48177d195b1c3407619d318e7524c7fee3fc"
 
     }
         }
