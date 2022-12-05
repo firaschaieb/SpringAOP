@@ -48,41 +48,39 @@ pipeline {
 //           }
 //         }
        
-//      stage("Building Docker Image") {
-//                 steps{
-//                     sh 'docker build -t firas1925/achat .'
-//                 }
-//         }
-//
-//
-//            stage("Login to DockerHub") {
-//                 steps{
-//                    // sh 'sudo chmod 666 /var/run/docker.sock'
-//                     sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u firas1925 -p firas1925'
-//                 }
-//         }
-//         stage("Push to DockerHub") {
-//                 steps{
-//                     sh 'docker push firas1925/achat'
-//                 }
-//         }
-//
+     stage("Building Docker Image") {
+                steps{
+                    sh 'docker build -t dbiradali/achatdevops .'
+                }
+        }
+
+
+           stage("Login to DockerHub") {
+                steps{
+                   // sh 'sudo chmod 666 /var/run/docker.sock'
+                    sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u dbiradali -p 203JMT4330'
+                }
+        }
+        stage("Push to DockerHub") {
+                steps{
+                    sh 'docker push dbiradali/achatdevops'
+                }
+        }
+
 //                stage("Docker-compose") {
 //                 steps{
 //                     sh 'docker-compose up -d'
 //                 }
 //         }
-//     }
+    }
     
 //     post {
 //                 success {
 //                    echo 'succes'
 //                 }
-// failure {
+//                 failure {
 //                   echo 'failed'
 //                 }
-//
-//
-    }
+//     }
 
 }
