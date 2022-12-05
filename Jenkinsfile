@@ -43,14 +43,11 @@ pipeline {
 
 
 
-//          stage ('Scan Sonar'){
-//             steps {
-//             sh "mvn sonar:sonar \
-//   -Dsonar.projectKey=devops \
-//   -Dsonar.host.url=http://192.168.8.101:9000 \
-//   -Dsonar.login=58de8aa1109e481d57c3e7ba74ae53801df9d8be"
-//   }
-//         }
+         stage ('Scan Sonar'){
+            steps {
+            sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=203JMT4330 "
+            }
+        }
 //         stage('Nexus') {
 //           steps {
 //             sh 'mvn deploy -DskipTests'
